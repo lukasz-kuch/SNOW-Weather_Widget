@@ -11,6 +11,7 @@
                 var obj = JSON.parse(responseBody);
 								data.location = obj.name;
                 var ico = obj.weather[0].icon;
+                //retrive all details from JSON file
                 data.icon = "https://openweathermap.org/img/wn/" + ico + "@2x.png";
                 data.description = obj.weather[0].description;
 
