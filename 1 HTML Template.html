@@ -1,0 +1,36 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Check the weather in your city</h3>
+  </div>
+  <div><br>
+    <div class="panel-body m-b-n">
+      <div class="form-group">
+        <input class="form-control" placeholder="Enter the city" ng-model="c.data.city"><br>
+        <button type="button" ng-click="c.getDetails()" class="btn btn-info">Search</button>
+      </div>
+      <div class="form-group">
+        <div id="details-con" ng-if="c.values" class="panel panel-default">
+          <div>
+            <h2>${{{c.data.location}}  {{c.data.temp}}&#8451}</h2>
+            <h4 id="feel">${feels like: {{c.data.temp_feel}}&#8451}</h4>
+          </div>
+          <div class="container">
+            <div id="div1">
+              <img src={{c.data.icon}}>
+            </div>
+            <div id="div2">
+              <a>{{c.data.description}}</a>
+            </div>
+          </div>
+          <div>
+            <div class="form-group" id="wrapper">
+              <p>Wind speed: {{data.wind}} m/s</p>
+              <p>Pressure: {{data.pressure}} hPa</p>
+              <p>Humidity: {{data.hum}} %</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
